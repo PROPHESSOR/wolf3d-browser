@@ -24,7 +24,8 @@
 * ===========================================================================
 */
 
- 
+console.log('game.js'); 
+
 /** 
  * @namespace 
  * @description Game management

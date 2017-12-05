@@ -101,7 +101,7 @@ $(document).ready(function() {
         };
         return resource;
     });
-
+/*
     
     Modernizr.load([
         {
@@ -120,7 +120,13 @@ $(document).ready(function() {
                 Modernizr.load(files2);
             }
         }
-    ]);
+    ]);*/
+	
+	$("#title-screen").fadeOut(1500, function() {
+    	Wolf.Input.init();
+        Wolf.Game.init();
+        Wolf.Menu.show();
+    });
 });
 
 })(jQuery);

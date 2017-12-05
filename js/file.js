@@ -24,6 +24,7 @@
 * ===========================================================================
 */
 
+console.log('file.js');
  
 /** 
  * @namespace 
@@ -53,7 +54,7 @@ Wolf.File = (function() {
                     callback(new Error("Server returned HTTP status: " + xhr.status));
                 }
             }
-        }
+        };
         xhr.open("GET", url, true);
         xhr.overrideMimeType('text/plain; charset=x-user-defined');
         xhr.send(null);
@@ -109,7 +110,7 @@ Wolf.File = (function() {
      * @returns {number} 
      */
     function readUInt8(f) {
-        var b = f.data.charCodeAt(f.position) & 0xFF
+        var b = f.data.charCodeAt(f.position) & 0xFF;
         f.position++;
         return b;
     }
