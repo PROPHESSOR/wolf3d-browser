@@ -29,8 +29,8 @@ console.log('wolf.js');
 /** @namespace */
 var Wolf = {
 
-    XRES                : 320,//608
-    YRES                : 200,//304
+    XRES                : 608,//608
+    YRES                : 304,//304
     SLICE_WIDTH         : 3,
     WALL_TEXTURE_WIDTH  : 64,
     NUM_WALL_TEXTURES   : 55,
