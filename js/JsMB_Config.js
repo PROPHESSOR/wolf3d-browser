@@ -6,3 +6,5 @@ const $Config = {
     Debug_Mode: false,
     name: "Wolfenstein 3D"
 }
+
+function Main(){}

@@ -187,12 +187,16 @@ Wolf.Renderer = (function() {
             z = (maxDistZ - proc.dist) >> 0,
             itop;
             
-        if (Wolf.ISXP && Wolf.ISFIREFOX) {
-            itop = (proc.texture % 2) ? 0 : -height;
-        } else {
+        // if (Wolf.ISXP && Wolf.ISFIREFOX) {
+            // itop = (proc.texture % 2) ? 0 : -height;
+        // } else {
             itop = -(proc.texture-1) * height;
             textureSrc = "art/walls-shaded/64/walls.png";
-        }
+		// }
+		gelLoad(textureSrc, 'texture');
+		// $Gel.texture = image;
+		$Gel.texture._top = image._top;
+		image = $Gel.texture;
        
         if (image._src != textureSrc) {
             image._src = textureSrc;
@@ -224,7 +228,13 @@ Wolf.Renderer = (function() {
         }
         if (image._left != left) {
             imgStyle.left = (image._left = left) + "px";
-        }
+		}
+		
+		// gelSize('texture', 192, height);
+		// makeTexture('texture', 'repeat');
+		// // setColor(rgb(limit(height,0,255),limit(height,0,255),limit(height,0,255)));
+		// drawLine(n * 3, 0, n * 3, 200);
+		drawGel('texture', top, left);
     }
 
     function drawWall(n, viewport, tracePoint, level) {

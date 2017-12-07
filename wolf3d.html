@@ -16,11 +16,11 @@
     <link rel="shortcut icon" href="favicon.png" />
     <title>Wolfenstein 3D</title>
     <link rel="stylesheet" href="styles.css">
-
-    <script src="js/JsMB_Config.js"></script>
-    <script src="js/MobileBasic.dll"></script>
+    <canvas id="c" width="64" height="64"></canvas>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/JsMB_Config.js"></script>
+    <script src="js/MobileBasic.js"></script>
     <script src="js/requestanimframe.js"></script>
 
     <script src="js/wolf.js"></script>
@@ -245,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="loading">
+            <div class="loading" style="display:none">
                 <img alt="" src="art/getpsyched.png" />
             </div>
 
@@ -363,8 +363,6 @@
             </div>
         </div>
     </div>
-
-    <canvas id="c" width="320" height="200"></canvas>
 
 </body>
 
